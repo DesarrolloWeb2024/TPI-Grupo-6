@@ -1,5 +1,5 @@
 body {
-    background-color: #226db3ee;
+    background-color: #ff0000d5;
     font-family: 'Open Sans Condensed', sans-serif;
 }
 
@@ -51,12 +51,12 @@ a {
 }
 
 .site-logo a {
-    color: #0a4a92;
+    color: #ff0000cb;
     text-decoration: none;
 }
 
 .site-logo a:hover, .site-logo a:focus {
-    color: #000;
+    color: #000000;
 }
 
 .header-item {
@@ -75,7 +75,7 @@ a {
 }
 
 .header-item-holder .header-item:hover, .header-item-holder  .header-item:focus {
-    color: #000;
+    color: #888888;
     text-decoration: none;
 }
 
@@ -302,7 +302,7 @@ a.product-name:hover, a.product-name:focus {
     border-radius: 0;
     margin-right: 10px;
     float: left;
-    background-color: #cccccc;
+    background-color: #51ff00;
 }
 
 .rating-list .progress .progress-bar {
@@ -317,7 +317,7 @@ a.product-name:hover, a.product-name:focus {
 }
 
 .bg-gray {
-    background-color: #e4e4e4;
+    background-color: #00f815;
 }
 
 .ratings {
@@ -352,7 +352,7 @@ a.product-name:hover, a.product-name:focus {
 }
 
 .pagination .page-link:hover, .pagination .page-link:focus {
-    color: #000;
+    color: #7afd00;
 }
 
 .pagination .page-item.disabled .page-link {
@@ -361,7 +361,7 @@ a.product-name:hover, a.product-name:focus {
 }
 
 .pagination .page-item.active .page-link {
-    background-color: #656565;
+    background-color: #8d8d8d;
     color: #fff;
     font-size: 23px;
     line-height: 1;
