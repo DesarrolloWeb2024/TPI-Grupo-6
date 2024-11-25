@@ -94,13 +94,13 @@ a {
 
 /* NAV 2 */
 
-/* Reducir márgenes laterales en los enlaces de la barra de navegación */
+
 .nav-link {
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
   
-  /* Cambiar color al hacer hover */
+ 
   .nav-link:hover {
     color: #007bff;
     text-decoration: underline;
@@ -110,13 +110,49 @@ a {
     background-color: #000000;
   }
   
-  /* Altura fija y centrado */
+  
 .navbar {
     height: 80px;
     display: flex;
-    align-items: center; /* Centrar los elementos verticalmente */
+    align-items: center; 
   }
   
+
+/* Nosotros */
+
+.about-section, .vision-section {
+    background-color: #c76060ee;
+    padding: 10rem;
+    border-radius: 5px; 
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .text-muted {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  
+  
+  
+  /* img {
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 15px; 
+  } */
+  
+  .container {
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+  }
+  
+  .bg-white {
+    background-color: #fff !important;
+  }
 
 .product-item {
     box-shadow: #882d2d 0 0 10px 1px;
