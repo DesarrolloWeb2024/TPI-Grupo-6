@@ -32,14 +32,20 @@ app.get('/api/products', (req, res) => {
       urlImg: 'https://raffe.com.ar/wp-content/uploads/2017/06/Bola-de-Lomo-Raffe.jpg' 
     },
     { 
-      id: 3, 
+      id: 4, 
       name: 'Paleta',  
       oldPrice: 3500, 
       price: 2200, 
       urlImg: 'https://raffe.com.ar/wp-content/uploads/2017/06/Paleta-Cuadril-Raffe.jpg' 
     },
-    
-    
+    { 
+      id: 5, 
+      name: 'Paleta',  
+      oldPrice: 3500, 
+      price: 2200, 
+      urlImg: 'https://raffe.com.ar/wp-content/uploads/2017/06/Paleta-Cuadril-Raffe.jpg' 
+    },
+  
   ];
 
   res.json(products);
