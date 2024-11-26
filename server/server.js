@@ -40,10 +40,31 @@ app.get('/api/products', (req, res) => {
     },
     { 
       id: 5, 
-      name: 'Paleta',  
+      name: 'Roast Beef',  
+      oldPrice: 6500, 
+      price: 5200, 
+      urlImg: 'https://raffe.com.ar/wp-content/uploads/2017/06/Roast-Beef-Raffe.jpg' 
+    },
+    { 
+      id: 6, 
+      name: 'Osobuco',  
       oldPrice: 3500, 
-      price: 2200, 
-      urlImg: 'https://raffe.com.ar/wp-content/uploads/2017/06/Paleta-Cuadril-Raffe.jpg' 
+      price: 2400, 
+      urlImg: 'https://raffe.com.ar/wp-content/uploads/2019/06/Osobuco-Raffe.jpg' 
+    },
+    { 
+      id: 7, 
+      name: 'Vacio',  
+      oldPrice: 8900, 
+      price: 7500, 
+      urlImg: 'https://raffe.com.ar/wp-content/uploads/2017/06/Vacio-Raffe.jpg' 
+    },
+    { 
+      id: 8, 
+      name: 'Bife de chorizo',  
+      oldPrice: 9000, 
+      price: 7800, 
+      urlImg: 'https://raffe.com.ar/wp-content/uploads/2019/06/Bife-de-Chorizo-Raffe.jpg' 
     },
   
   ];
