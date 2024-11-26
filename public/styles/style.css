@@ -1,6 +1,6 @@
 body {
     background-color: #c76060ee;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 a {
@@ -96,13 +96,14 @@ a {
 
 
 .nav-link {
+    color: #ffffff;
     margin-left: 20px;
     margin-right: 20px;
   }
   
  
   .nav-link:hover {
-    color: #007bff;
+    color: #962020;
     text-decoration: underline;
   }
 
@@ -183,7 +184,7 @@ a {
 }
 
 a.product-name:hover, a.product-name:focus {
-    color: #ffffff;
+    color: #887979;
     text-decoration: none;
 }
 
