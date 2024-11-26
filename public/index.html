@@ -139,6 +139,24 @@
                                 <div class="row" id="product-list">
                                     <!-- Product -->
                                      </div>
+                                     <div class="row">
+                                        <div class="col-12">
+                                            <div class="calculator-container">
+                                                <h2 class="calculator-title">Calculadora de Porciones</h2>
+                                                <div class="calculator-box">
+                                                    <label for="num-personas" class="calculator-label">¿Cuántas personas comerán?</label>
+                                                    <input type="number" id="num-personas" placeholder="Ejemplo: 5" min="1" class="calculator-input">
+                                    
+                                                    <label for="tipo-comida" class="calculator-label">Tipo de comida:</label>
+                                                    <select id="tipo-comida" class="calculator-select">
+                                                        <option value="asado">Asado</option>
+                                                        <option value="guiso">Guiso</option>
+                                                        <option value="milanesa">Milanesa</option>
+                                                    </select>
+                                                    <button onclick="calcularPorciones()" class="calculator-btn">Calcular</button>
+                                    
+                                                    <p id="resultado" class="calculator-result"></p>
+                                    </div>                                    
                             </div>
                         </div>
                     </div>
@@ -242,5 +260,23 @@
     
     <script type="text/javascript" src="scripts/script.js"></script>
     <script type="text/javascript" src="scripts/main.js"></script>
+    <script>
+        function calcularPorciones() {
+            const personas = document.getElementById('num-personas').value;
+            const tipoComida = document.getElementById('tipo-comida').value;
+            let porciones = 0;
+    
+            if (tipoComida === "asado") {
+                porciones = personas * 0.5; // 500g por persona
+            } else if (tipoComida === "guiso") {
+                porciones = personas * 0.3; // 300g por persona
+            } else if (tipoComida === "milanesa") {
+                porciones = personas * 0.4; // 400g por persona
+            }
+    
+            document.getElementById('resultado').innerText = 
+                `Necesitarás aproximadamente ${porciones.toFixed(2)} kg de carne para ${personas} persona(s).`;
+        }
+    </script>
 </body>
 </html>
