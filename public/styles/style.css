@@ -1,5 +1,5 @@
 body {
-    background-color: #c76060ee;
+    background-image: linear-gradient(to right, #ff9191, #ff8381, #ff7471, #ff6461, #ff5350, #ff5653, #ff5955, #ff5c58, #ff726e, #ff8784, #ff9b99, #ffaeae);
     font-family: 'Open Sans Condensed', sans-serif;
 }
 
@@ -121,7 +121,7 @@ a {
 /* Nosotros */
 
 .about-section, .vision-section {
-    background-color: #c76060ee;
+    background-image: linear-gradient(to right, #ff9191, #ff8381, #ff7471, #ff6461, #ff5350, #ff5653, #ff5955, #ff5c58, #ff726e, #ff8784, #ff9b99, #ffaeae);
     padding: 10rem;
     border-radius: 5px; 
   }
@@ -151,7 +151,7 @@ a {
   }
   
   .bg-white {
-    background-color: #fff !important;
+    background-color: #000000;
   }
 
 .product-item {
@@ -455,5 +455,25 @@ table td img {
         border-left: 0 solid #c7c8c9;
         border-top: 1px solid #c7c8c9;
     }
+
+    .css-button-fully-rounded--red {
+        min-width: 130px;
+        height: 40px;
+        color: #fff;
+        padding: 5px 10px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        outline: none;
+        border-radius: 20px;
+        border: 2px solid #d90429;
+        background: #d90429;
+      }
+      .css-button-fully-rounded--red:hover {
+        background: #fff;
+        color: #d90429
+      }
 
 }
