@@ -139,13 +139,7 @@ a {
     line-height: 1.8;
   }
   
-  
-  
-  /* img {
-    max-height: 350px;
-    object-fit: cover;
-    border-radius: 15px; 
-  } */
+
   
   .container {
     border: 1px solid #e0e0e0;
@@ -155,6 +149,10 @@ a {
   .bg-white {
     background-color: #000000;
   }
+
+.titulo-productos{
+    font-weight: 800;
+}
 
 .product-item {
     box-shadow: #882d2d 0 0 10px 1px;
@@ -455,6 +453,29 @@ table td img {
     text-align: justify;
     text-justify: inter-word;
 }
+
+/* boton de wsp */
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px;  
+    z-index: 1000;
+    background-color: #25d366; 
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .whatsapp-btn img {
+    width: 30px;
+    height: 30px;
+  }
 
 
 @media (max-width: 767.98px) {
