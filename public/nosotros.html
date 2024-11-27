@@ -124,30 +124,30 @@
                     </div>
                   </div>
                 </div>
-              </section>  
-<div class="container py-0,5" id="programa-fidelidad" style="background-color: white; border-radius: 8px;">
-    <div class="row justify-content-center">
-        <div class="col-12 text-center mb-4">
-            <h2 class="titulo-programa-fidelidad" style="font-family: 'Open Sans', sans-serif; color: black;">¡Únete a nuestro Programa de Fidelidad!</h2>
-            <p style="color: black;">Acumula puntos con cada compra y canjéalos por descuentos y productos exclusivos. Cuanto más compras, más ahorras. ¡Es nuestra forma de agradecerte por confiar en Carnicería Don Agustín!</p>
-        </div>
+            </section>  
+            <div class="container py-0,5" id="programa-fidelidad" style="background-color: #f0f0f0; border-radius: 8px;">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center mb-10">
+                        <h2 class="titulo-programa-fidelidad" style="font-family: 'Open Sans', sans-serif; color: black;">¡Únete a nuestro Programa de Fidelidad!</h2>
+                        <p style="color: black;">Acumula puntos con cada compra y canjéalos por descuentos y productos exclusivos. Cuanto más compras, más ahorras. ¡Es nuestra forma de agradecerte por confiar en Carnicería Don Agustín!</p>
+                    </div>
+            
+                    <div class="col-12 col-md-6 text-center">
+                        <h3 style="color: black;">¿Cómo funciona?</h3>
+                        <ul style="list-style: none; padding: 0; text-align: center; color: black;">
+                            <li><strong>1 punto</strong> por cada $100 gastados.</li>
+                            <li><strong>500 puntos</strong> = 10% de descuento en tu próxima compra.</li>
+                            <li>¡Acumula puntos rápidamente con nuestras promociones exclusivas!</li>
+                        </ul>
+                        <button class="btn btn-primary mt-3 d-block mx-auto" id="ver-puntos-btn">Ver Mis Puntos</button>
 
-        <div class="col-12 col-md-6">
-            <h3>¿Cómo funciona?</h3>
-            <ul>
-                <li><strong>1 punto</strong> por cada $100 gastados.</li>
-                <li><strong>500 puntos</strong> = 10% de descuento en tu próxima compra.</li>
-                <li>¡Acumula puntos rápidamente con nuestras promociones exclusivas!</li>
-            </ul>
-            <button class="btn btn-primary">Ver Mis Puntos</button>
-        </div>
-
-        <div class="col-12 col-md-6">
-            <h3>Beneficios</h3>
-            <p>Este programa te ofrece una forma sencilla de ahorrar en cada compra. Además, al acumular puntos, podrás acceder a descuentos exclusivos y promociones especiales que solo nuestros miembros pueden aprovechar.</p>
-        </div>
-    </div>
-</div>
+                    </div>
+                    <div class="col-12 col-md-6 text-center">
+                        <h3 style="color: black;">Beneficios</h3>
+                        <p style="color: black;">Este programa te ofrece una forma sencilla de ahorrar en cada compra. Además, al acumular puntos, podrás acceder a descuentos exclusivos que solo nuestros miembros pueden aprovechar.</p>
+                    </div>
+                </div>
+            </div>            
             <!-- <div class="col-12">
                 Main Content
                 <main class="row">
@@ -297,5 +297,56 @@
     
     <script type="text/javascript" src="scripts/script.js"></script>
     <script type="text/javascript" src="scripts/main.js"></script>
+<div id="dni-modal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 20px; box-shadow: 0px 4px 10px rgba(0,0,0,0.25); border-radius: 10px; width: 300px; text-align: center; z-index: 1000;">
+    <h3 style="margin-bottom: 20px; color: black;">Consulta de Puntos</h3>
+    <label for="dni-input" style="color: black;">Ingresa tu DNI:</label>
+    <input type="text" id="dni-input" placeholder="Ej: 12345678" style="width: 100%; padding: 8px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px;">
+    <button id="consultar-dni-btn" style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+        Consultar
+    </button>
+    <button id="cerrar-modal-btn" style="margin-top: 10px; background-color: #dc3545; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+        Cerrar
+    </button>
+</div>
+
+<div id="modal-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 999;"></div>
+<script>
+
+    const verPuntosBtn = document.getElementById('ver-puntos-btn');
+    const modal = document.getElementById('dni-modal');
+    const overlay = document.getElementById('modal-overlay');
+    const cerrarModalBtn = document.getElementById('cerrar-modal-btn');
+    const consultarDniBtn = document.getElementById('consultar-dni-btn');
+    const dniInput = document.getElementById('dni-input');
+
+    verPuntosBtn.addEventListener('click', () => {
+        modal.style.display = 'block';
+        overlay.style.display = 'block';
+    });
+
+    cerrarModalBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+        overlay.style.display = 'none';
+        dniInput.value = ''; 
+    });
+
+    consultarDniBtn.addEventListener('click', () => {
+        const dni = dniInput.value.trim();
+        if (dni) {
+            alert(`DNI ingresado: ${dni}. Aquí se mostrarían los puntos acumulados.`);
+            modal.style.display = 'none';
+            overlay.style.display = 'none';
+            dniInput.value = ''; 
+        } else {
+            alert('Por favor, ingresa tu DNI.');
+        }
+    });
+
+    overlay.addEventListener('click', () => {
+        modal.style.display = 'none';
+        overlay.style.display = 'none';
+        dniInput.value = ''; 
+    });
+</script>
 </body>
 </html>
