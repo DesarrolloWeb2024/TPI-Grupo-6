@@ -476,7 +476,38 @@ table td img {
     width: 30px;
     height: 30px;
   }
+  .promo-banner {
+    width: 100%;
+    background-color: #ffffff; /* Fondo blanco */
+    color: #ff5350; /* Color de texto */
+    text-align: center;
+    font-size: 2rem; /* Tamaño de letra */
+    padding: 45px 0 30px; /* Relleno superior: 10px, inferior: 15px */
+    margin-bottom: -25px; /* Espacio debajo del banner */
+    border: 5px solid #ddd; /* Borde opcional */
+    overflow: hidden; /* Oculta el contenido que sobresale */
+    position: relative; /* Asegura el contexto de la animación */
+    box-sizing: border-box; /* Incluye bordes y padding en el tamaño total */
+}
 
+.promo-banner span {
+    display: inline-block;
+    white-space: nowrap; /* Asegura que el texto no salte de línea */
+    position: absolute; /* Posiciona el texto para animarlo dentro del contenedor */
+    top: 20%; /* Centra el texto verticalmente */
+    transform: translateY(-50%); /* Ajusta para centrar */
+    will-change: transform; /* Optimiza el rendimiento de la animación */
+    animation: slide 10s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
 
 @media (max-width: 767.98px) {
 
